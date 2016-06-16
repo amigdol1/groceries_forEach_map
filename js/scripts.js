@@ -8,7 +8,13 @@ $(document).ready(function() {
       return item.toUpperCase();
 
     });
+    updatedGrocery.forEach(function(updateItem){
+      $("ul#updatedGrocery").append("<li>" + updateItem + "</li>");
+    });
     console.log(updatedGrocery);
     event.preventDefault();
+
+    $("form").hide();
+    $("#updatedGrocery").show();
   });
 });
